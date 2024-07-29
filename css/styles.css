@@ -1,15 +1,15 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
   padding: 0;
 }
 
 .gallery-item {
-  flex-basis: calc(33.333% - 10px);
+  flex-basis: calc(33.333% - 20px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+
   overflow: hidden;
 }
 
