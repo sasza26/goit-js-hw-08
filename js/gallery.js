@@ -83,21 +83,21 @@ const createMarkup = (items) => {
     .join("");
 };
 
- container.insertAdjacentHTML("beforeend", createMarkup(images));
- container.addEventListener("click", handleClick);
+container.insertAdjacentHTML("beforeend", createMarkup(images));
+container.addEventListener("click", handleClick);
 
- function handleClick(event) {
-   event.preventDefault();
+function handleClick(event) {
+  event.preventDefault();
 
-   const clickedImage = event.target.closest(".gallery-image");
-   if (!clickedImage) return;
+  const clickedImage = event.target.closest(".gallery-image");
+  if (!clickedImage) return;
 
-   const originalUrl = clickedImage.dataset.source;
-   const description = clickedImage.alt;
+  const originalUrl = clickedImage.dataset.source;
+  const description = clickedImage.alt;
 
-   const instance = basicLightbox.create(`
+  const instance = basicLightbox.create(`
         <div class="modal">
             <img src="${originalUrl}" alt="${description}">
         </div>`);
-   instance.show();
- } 
+  instance.show();
+}
